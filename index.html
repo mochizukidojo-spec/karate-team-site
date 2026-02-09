@@ -26,6 +26,37 @@
       border-left: 5px solid #c00;
       padding-left: 10px;
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    .intro {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.intro img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+  }
+}
   </style>
 </head>
 <body>
@@ -37,20 +68,55 @@
 
 <section>
   <h2>チーム紹介</h2>
-  <p>塩尻市・松本市で活動している小中学生向け空手チームです。<br>
-  　　大人の方もたくさん稽古に励んでいます。</p>
+
+  <div class="intro">
+    <img src="dojo.jpg" alt="松本明誠会 望月空手道場の練習風景">
+
+    <p>
+      塩尻市・松本市で活動している小中学生向け空手チームです。<br>
+      大人の方もたくさん稽古に励んでいます。
+    </p>
+  </div>
 </section>
+
 
 <section>
   <h2>練習日時・場所</h2>
-  <ul>
-    <li>毎週　月・木 19:00〜21:00</li>
-    <li>高出公民館</li>
-    <li>毎週 水 19:00〜21:00</li>
-    <li>松本市立 鎌田中学校</li>
-    <li>毎週 土 16:00〜19:00</li>
-    <li>松本市 高宮公民館</li>
-  </ul>
+  <table>
+    <tr>
+      <th>曜日</th>
+      <th>時間</th>
+      <th>場所</th>
+    </tr>
+    <tr>
+      <td>月・木</td>
+      <td>19:00〜21:00</td>
+      <td>高出公民館<br>
+        <a href="https://www.google.com/maps?q=〒399-0703+長野県塩尻市広丘高出２１１４−１"
+        target="_blank" rel="noopener">
+        📍 Googleマップで見る
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>水</td>
+      <td>19:00〜21:00</td>
+      <td>松本市立 鎌田中学校(柔剣道場)<br>
+        <a href="https://www.google.com/maps?q=〒390-0837 長野県松本市鎌田２丁目３−５６"
+        target="_blank" rel="noopener">
+        📍 Googleマップで見る
+      </td>
+    </tr>
+    <tr>
+      <td>土</td>
+      <td>16:00〜19:00</td>
+      <td>松本市 高宮公民館<br>
+        <a href="https://www.google.com/maps?q=〒390-0843 長野県松本市高宮南７−４０"
+        target="_blank" rel="noopener">
+        📍 Googleマップで見る
+      </td>
+    </tr>
+  </table>
 </section>
 
 <section>
