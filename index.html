@@ -110,7 +110,23 @@
 <header>
   <h1> <span class="small-title">松本明誠会</span> 望月道場 </h1>
   <p>心・技・体を育てる</p>
-</header>
+
+    <p id="last-update" style="font-size: 0.9em; color: #666;"></p>
+    
+    <script>
+    fetch("https://api.github.com/repos/mochizukidojo-spec/karate-team-site/commits?per_page=1")
+      .then(res => res.json())
+      .then(data => {
+        const d = new Date(data[0].commit.committer.date);
+        const y = d.getFullYear();
+        const m = d.getMonth() + 1;
+        const day = d.getDate();
+        document.getElementById("last-update").textContent =
+          `最終更新日：${y}年${m}月${day}日`;
+      });
+    </script>
+      
+ </header>
 
 
 <section class="intro-section">
@@ -230,5 +246,6 @@
 
 </body>
 </html>
+
 
 
