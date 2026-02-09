@@ -95,7 +95,15 @@
   font-weight: bold;
 }
 
-  </style>
+.mail-link {
+  color: #0066cc;          /* 青 */
+  text-decoration: underline; /* 下線あり＝リンク感 */
+}
+.mail-link:hover {
+  color: #003366;          /* 少し濃い青 */
+}
+
+</style>
 </head>
 <body>
 
@@ -181,8 +189,34 @@
   <h2>体験・お問い合わせ</h2>
   <p>
     体験見学は随時受付中です。<br>
-    連絡先：mochizuki.dojo@gmail.com
+    連絡先：
+    <span id="mail-link"
+          style="color:blue; text-decoration:underline; cursor:pointer;">
+      mochizuki.dojo@gmail.com
+    </span>
   </p>
+
+  <script>
+    const user = "mochizuki.dojo";
+    const domain = "gmail.com";
+
+    const subject = "空手体験,見学申込み";
+    const body =
+      "【お名前】\r\n" +
+      "【学年】\r\n" +
+      "【お問い合わせ内容】";
+
+    const mailto =
+      "mailto:" + user + "@" + domain +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+
+    document.getElementById("mail-link").onclick = function () {
+      location.href = mailto;
+    };
+  </script>
+
+
 </section>
 
 <section>
@@ -195,5 +229,5 @@
 </section>
 
 </body>
-
 </html>
+
