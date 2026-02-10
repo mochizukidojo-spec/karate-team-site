@@ -107,6 +107,45 @@
 </head>
 <body>
 
+
+<!-- ★ ここに入れる ★ -->
+<script>
+async function sha256(str) {
+  const buf = await crypto.subtle.digest(
+    "SHA-256",
+    new TextEncoder().encode(str)
+  );
+  return Array.from(new Uint8Array(buf))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+const PASSWORD_HASH = "61182db72130073d04ea47b86cfa83acc178426ee7914d8810242d64ff41e262";
+const AUTH_KEY = "dojo_auth_ok";
+
+(async () => {
+  if (localStorage.getItem(AUTH_KEY) === "ok") return;
+
+  const input = prompt("関係者限定ページです。\nパスワードを入力してください");
+
+  if (!input) {
+    location.href = "https://www.google.com";
+    return;
+  }
+
+  if (await sha256(input) === PASSWORD_HASH) {
+    localStorage.setItem(AUTH_KEY, "ok");
+  } else {
+    alert("パスワードが違います");
+    location.href = "https://www.google.com";
+  }
+})();
+</script>
+<!-- ★ ここまで ★ -->
+
+
+
+  
 <header>
   <h1> <span class="small-title">松本明誠会</span> 望月道場 </h1>
   <p>心・技・体を育てる</p>
@@ -246,6 +285,7 @@
 
 </body>
 </html>
+
 
 
 
