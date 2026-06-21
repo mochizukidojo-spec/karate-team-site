@@ -133,6 +133,24 @@
   }
 }
 
+.recruit-banner {
+    display: inline-block;
+    background: #f5d64a;      /* 黄色 */
+    color: #1d39d8;           /* 青文字 */
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.2;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    /* 文字を目立たせる */
+    text-shadow:
+        2px 2px 0 #ffffff,
+       -2px -2px 0 #ffffff,
+        2px -2px 0 #ffffff,
+       -2px 2px 0 #ffffff;
+}
 
 
 </style>
@@ -181,7 +199,9 @@ const AUTH_KEY = "dojo_auth_ok";
 
   
 <header>
-  <h1> <span class="small-title">松本明誠会</span> 望月道場 </h1>
+  <h1> 松本・塩尻のキッズ・親子空手教室<br>
+  望月空手道場</h1>
+  <!--<h1>望月空手道場<span class="small-title">｜松本市のキッズ・親子空手教室 </span> </h1> -->
   <p>心・技・体を育てる</p>
 
     <p id="last-update" style="font-size: 0.9em; color: #666;"></p>
@@ -202,11 +222,16 @@ const AUTH_KEY = "dojo_auth_ok";
  </header>
 
 <div class="notice-banner">
-  🥋 キッズ空手・レディース,ママさん空手 募集中
+  <div class="recruit-banner">
+  🥋 キッズ・ママ・パパ<br>
+  生徒募集中！
+  </div>
   <span class="sub">
     日時応相談 ｜ 初心者歓迎 ｜ 見学・体験随時受付中
   </span>
 </div>
+
+
 
 <section class="intro-section">
 
@@ -243,7 +268,9 @@ const AUTH_KEY = "dojo_auth_ok";
 
 
 <section>
-  <h2>練習日時・場所</h2>
+  <h2>練習日時・場所 
+     <span class="small-title">※ご都合に合わせて、お好きな会場・お好きな時間帯でご参加いただけます。 </span>
+  </h2>
   <table>
     <tr>
       <th>曜日</th>
