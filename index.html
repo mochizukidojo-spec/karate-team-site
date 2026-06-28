@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>松本市・塩尻市のキッズ・親子空手教室｜望月空手道場</title>
+  <style>
+    .small-title { font-size: 0.6em; /* 好きなサイズに調整 */ }
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    h2 {
+      border-left: 5px solid #c00;
+      padding-left: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    .intro {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.intro img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+  }
+}
+
+.practice {
+  padding: 40px 20px;
+  background: #f7f7f7;
+}
+
+.practice h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.practice-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.practice-images img {
+  width: 300px; /* 好きなサイズに変更OK */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.section-title .motto {
+  color: #c00;
+  font-weight: bold;
+}
+
+.mail-link {
+  color: #0066cc;          /* 青 */
+  text-decoration: underline; /* 下線あり＝リンク感 */
+}
+.mail-link:hover {
+  color: #003366;          /* 少し濃い青 */
+}
+
+
+
+.notice-banner {
+  background: #1e3a5f;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-top: 3px solid #d4af37;
+  border-bottom: 3px solid #d4af37;
+}
+
+.notice-banner .sub {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85em;
+  font-weight: normal;
+}
+
+@media (max-width: 600px) {
+  .notice-banner {
+    font-size: 1em;
+  }
+
+  .notice-banner .sub {
+    font-size: 0.8em;
+  }
+}
+
+.recruit-banner {
+    display: inline-block;
+    background: #f5d64a;      /* 黄色 */
+    color: #1d39d8;           /* 青文字 */
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.2;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    /* 文字を目立たせる */
+    text-shadow:
+        2px 2px 0 #ffffff,
+       -2px -2px 0 #ffffff,
+        2px -2px 0 #ffffff,
+       -2px 2px 0 #ffffff;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<!-- ★ ここに入れる ★ -->
+<!--
+<script>
+async function sha256(str) {
+  const buf = await crypto.subtle.digest(
+    "SHA-256",
+    new TextEncoder().encode(str)
+  );
+  return Array.from(new Uint8Array(buf))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+const PASSWORD_HASH = "61182db72130073d04ea47b86cfa83acc178426ee7914d8810242d64ff41e262";
+const AUTH_KEY = "dojo_auth_ok";
+
+(async () => {
+  if (localStorage.getItem(AUTH_KEY) === "ok") return;
+
+  const input = prompt("関係者限定ページです。\nパスワードを入力してください");
+
+  if (!input) {
+    location.href = "https://www.google.com";
+    return;
+  }
+
+  if (await sha256(input) === PASSWORD_HASH) {
+    localStorage.setItem(AUTH_KEY, "ok");
+  } else {
+    alert("パスワードが違います");
+    location.href = "https://www.google.com";
+  }
+})();
+</script>
+-->
+<!-- ★ ここまで ★ -->
+
+
+
+  
+<header>
+  <h1> 松本・塩尻のキッズ・親子空手教室<br>
+  望月空手道場</h1>
+  <!--<h1>望月空手道場<span class="small-title">｜松本市のキッズ・親子空手教室 </span> </h1> -->
+  <p>心・技・体を育てる</p>
+
+    <p id="last-update" style="font-size: 0.9em; color: #666;"></p>
+    
+    <script>
+    fetch("https://api.github.com/repos/mochizukidojo-spec/karate-team-site/commits?per_page=1")
+      .then(res => res.json())
+      .then(data => {
+        const d = new Date(data[0].commit.committer.date);
+        const y = d.getFullYear();
+        const m = d.getMonth() + 1;
+        const day = d.getDate();
+        document.getElementById("last-update").textContent =
+          `最終更新日：${y}年${m}月${day}日`;
+      });
+    </script>
+      
+ </header>
+
+<div class="notice-banner">
+  <div class="recruit-banner">
+  🥋 キッズ・ママ・パパ<br>
+  生徒募集中！
+  </div>
+  <span class="sub">
+    日時応相談 ｜ 初心者歓迎 ｜ 見学・体験随時受付中
+  </span>
+</div>
+
+
+
+<section class="intro-section">
+
+
+
+<section class="intro-section">
+  <div class="section-title">
+    <h2>道場紹介</h2>
+    <span class="motto">道場のモットー：流汗悟道</span>
+  </div>
+
+  <div class="intro">
+    <img src="images/dojo.jpg" alt="練習風景">
+
+    <p>
+      長野県松本市・塩尻市で活動する空手道場です。<br><br>
+
+      「流汗悟道（りゅうかんごどう）― 汗を流し、心と技を磨く ―」<br>
+      をモットーに、子どもから大人まで、それぞれの目的に合わせた稽古を行っています。<br><br>
+      ※日本空手松涛連盟「松本明誠会」に所属しています。<br><br>
+
+      <strong>【この道場で身につくこと】</strong><br>
+      ・礼儀・礼節、正しい姿勢<br>
+      ・最後まであきらめない心、集中力<br>
+      ・心と体の成長を実感できる稽古<br><br>
+
+      <strong>【目的に合わせた指導】</strong><br>
+      ・仲間やきょうだい、親子で楽しく汗を流したい<br>
+      ・大会出場を目指したい<br>
+      ・体力づくり・ダイエット・リフレッシュしたい大人の方
+    </p>
+  </div>
+</section>
+
+
+<section>
+  <h2>練習日時・場所 
+     <span class="small-title">※ご都合に合わせて、お好きな会場・お好きな時間帯でご参加いただけます。 </span>
+  </h2>
+  <table>
+    <tr>
+      <th>曜日</th>
+      <th>時間</th>
+      <th>場所</th>
+    </tr>
+    <tr>
+      <td>月・木</td>
+      <td>19:00〜21:00</td>
+      <td>塩尻市 高出公民館<br>
+        <a href="https://www.google.com/maps?q=〒399-0703+長野県塩尻市広丘高出２１１４−１"
+        target="_blank" rel="noopener">
+        <span class="small-title">📍 Googleマップで見る</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>水</td>
+      <td>19:00〜21:00</td>
+      <td>松本市立 鎌田中学校(柔剣道場)<br>
+        <a href="https://www.google.com/maps?q=〒390-0837 長野県松本市鎌田２丁目３−５６"
+        target="_blank" rel="noopener">
+        <span class="small-title">📍 Googleマップで見る</span>
+      </td>
+    </tr>
+    <tr>
+      <td>土</td>
+      <td>16:00〜19:00</td>
+      <td>松本市 高宮公民館<br>
+        <a href="https://www.google.com/maps?q=〒390-0843 長野県松本市高宮南７−４０"
+        target="_blank" rel="noopener">
+        <span class="small-title">📍 Googleマップで見る</span>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>見学 体験・お問い合わせ</h2>
+  <p>
+    見学 体験は随時受付中です。<br>
+    連絡先：
+    <a href="mailto:mochizuki.dojo&#64;gmail.com?subject=空手体験申込み&body=【お名前】%0D%0A【学年】%0D%0A【お問い合わせ内容】">
+      mochizuki.dojo&#64;gmail.com
+    </a>
+  </p>
+
+
+  <script>
+    const user = "mochizuki.dojo";
+    const domain = "gmail.com";
+
+    const subject = "空手体験,見学申込み";
+    const body =
+      "【お名前】\r\n" +
+      "【学年】\r\n" +
+      "【お問い合わせ内容】";
+
+    const mailto =
+      "mailto:" + user + "@" + domain +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+
+    document.getElementById("mail-link").onclick = function () {
+      location.href = mailto;
+    };
+  </script>
+
+
+</section>
+
+<section>
+  <h2>練習風景</h2>
+  <div class="practice-images">
+    <img src="images/practice1.jpg" alt="練習風景1">
+    <img src="images/practice2.jpg" alt="練習風景2">
+    <img src="images/practice3.jpg" alt="練習風景3">
+  </div>
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
